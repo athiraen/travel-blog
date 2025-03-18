@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/pf.css' %}">
+
+<div class="profile-info">
+    <h1 style="text-align: center;">Edit Profile</h1>
+    <div class="msg">
+        {% for message in messages %}
+            <h3 style="font-size: 18px;color: rgb(47, 217, 24);">
+                {{ message }}
+            </h3>
+        {% endfor %}
+    </div>
+
+    <form method="POST" enctype="multipart/form-data">
+        {% if profile.profile_picture %}
+            <img src="{{ profile.profile_picture.url }}" alt="Profile Picture" width="150">
+       
+        {% else %}
+            <p> no profile photo </p>
+        {% endif %}
+
+        <div>
+            <label for="id_profile_picture">Change Profile Picture:</label><br>
+            <input type="file" name="profile_picture" id="id_profile_picture">
+        </div>
+
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="id_first_name">Name:</label>
+            <input type="text" name="first_name" id="id_first_name" class="form-control" value="{{ user.first_name }}">
+        </div>
+
+        <div class="form-group">
+            <label for="id_username">Username:</label>
+            <input type="text" name="username" id="id_username" class="form-control" value="{{ user.username }}">
+        </div>
+
+        <div class="form-group">
+            <label for="id_email">Email:</label>
+            <input type="email" name="email" id="id_email" class="form-control" value="{{ user.email }}">
+        </div>
+        <div class="button">
+        <button type="submit" class="btn btn-primary">Update</button>
+    </div>
+    </form>
+
+
+</div>
+
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .profile-info {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 400px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    label {
+        font-weight: bold;
+    }
+
+    input.form-control {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+    }
+
+    
+</style>
+{% endblock %}

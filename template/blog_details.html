@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">{{ blog.title }}</h1>
+    <small class="text-muted mb-3">Posted on {{ blog.created_at|date:"F d, Y" }}</small>
+    <div class="text-center">
+        {% if blog.travel_photos %}
+        <img src="{{ blog.travel_photos.url }}" class="img-fluid" alt="Blog Image" style="max-height: 500px; object-fit: cover;">
+        {% endif %}
+    </div>
+    <p class="author mt-3">Author: {{ blog.author.username }}</p>
+    <div class="mt-4">
+        <p style="text-align: justify; line-height: 1.9;">{{ blog.content }}</p>
+    </div>
+</div>
+
+
+<a href="{% url 'blog' %}"  class="btn btn-lg btn-primary btn-lg-square back-to-top" ><i class="bi bi-arrow-right"></i></a>
+
+{% endblock %}

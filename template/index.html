@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 mb-5">
+        <div class="owl-carousel header-carousel position-relative">
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="{% static 'img/bg_1.jpg' %}" alt="">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(24, 29, 56, .7);">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-sm-10 col-lg-8" style="margin-bottom: 350px;">
+                                <h5 class="text-primary text-uppercase mb-3 animated slideInDown" style="color: #06BBCC;">Galavant 🌍✈️</h5>
+                                <h1 class="display-3 text-white animated slideInDown">Man cannot discover new oceans unless he has the courage to lose sight of the shore..</h1>
+                                <a href="{% url 'blog' %}" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft" style="background-color: #06BBCC;">Read More</a>
+                                <a href="{% url 'sign_up' %}" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+          <!-- About Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6 hidden fade-in-up" id="about-text">
+                <h2 style="text-decoration: none; color: #06BBCC; margin-bottom: 20px; margin-top: 0px;">About Us</h2>
+                <h1 class="mb-4">Welcome to <span class="text-primary text-uppercase">Galavant</span></h1>
+                <p class="mb-4">Great! Let me know how I can help with your travel blog—whether it's setting up features, designing the layout, or adding travel-specific functionality. 🌍✈️</p>
+                <a class="btn btn-primary py-3 px-5 mt-2 hidden zoom-in" href="blog_list.html">Explore More</a>
+            </div>
+            <div class="col-lg-6">
+                <div class="row g-3">
+                    <div class="col-6 text-end hidden zoom-in" id="image1">
+                        <img class="img-fluid rounded w-75" src="{% static 'img/bg_1.jpg' %}" style="margin-top: 25%;">
+                    </div>
+                    <div class="col-6 text-start hidden zoom-in" id="image2">
+                        <img class="img-fluid rounded w-100" src="{% static 'img/bg_2.jpg' %}">
+                    </div>
+                    <div class="col-6 text-end hidden zoom-in" id="image3">
+                        <img class="img-fluid rounded w-50" src="{% static 'img/bg_4.jpg' %}">
+                    </div>
+                    <div class="col-6 text-start hidden zoom-in" id="image4">
+                        <img class="img-fluid rounded w-75" src="{% static 'img/bg_5.jpg' %}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- About End -->
+
+
+   {% endblock %}
