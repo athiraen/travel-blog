@@ -60,26 +60,128 @@
 
 
 <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        
-    }
+    
 
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f9;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
+    .profile {
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+  }
+  
 
-    }
-    .file-input-clear { 
-        display: none; 
-    }
-    p {
-        display: none;  /* Hides unnecessary text (optional) */
-    }
+  .user-profile-image-box img {
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      border: 3px solid #3498db;
+      object-fit: cover;
+      transition: transform 0.3s ease-in-out;
+  }
+  
+  .user-profile-image-box img:hover {
+      transform: scale(1.1);
+  }
+
+  .user-info {
+      margin-top: 15px;
+  }
+  
+  .label-data {
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 15px;
+      margin-bottom: 10px;
+      background-color: #f9f9fc;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+  }
+
+  .label {
+      font-weight: bold;
+      color: #333;
+  }
+  
+  .data {
+      color: #555;
+  }
+
+  .mt-2 {
+      margin-top: 15px;
+  }
+  
+  .mt-2 a {
+      display: block;
+      background-color: #27ae60;
+      color: white;
+      padding: 10px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      text-align: center;
+      transition: background-color 0.3s;
+  }
+  
+  .mt-2 a:hover {
+      background-color: #219150;
+  }
+  
+
+  form {
+      margin-top: 15px;
+      text-align: left;
+  }
+  
+  form input, form textarea, form select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+  }
+  
+  form button {
+      width: 100%;
+      background-color: #3498db;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      
+  }
+  
+  form button:hover {
+      background-color: #2980b9;
+  }
+
+  .msg {
+      text-align: center;
+      color: rgb(232, 0, 0);
+      font-weight: bold;
+  }
+
+  @media (max-width: 768px) {
+      .profile {
+          width: 90%;
+          max-width: 350px;
+          padding: 15px;
+          position: static; /* Removes absolute positioning on small screens */
+          transform: none;
+          margin: auto;
+      }
+  }
+
+  p {
+      display: none;
+  }
 </style>
 {% endblock %}
