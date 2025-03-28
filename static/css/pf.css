@@ -1,115 +1,131 @@
-.profile-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
-    max-width: 400px;
-    width: 100%;
-    margin-left: 550px;
-    margin-top: 80px;
+
+    /* Profile Box */
+    .profile {
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
   }
   
-  .profile-image {
-    width: 100px;
-    height: 100px;
-    border-radius: 25px;
-    border: 3px solid #3498db;
-    cursor: pointer;
-    transition: transform 0.2s ease-in-out;
+  
+  
+  
+  /* Profile Image */
+  .user-profile-image-box img {
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      border: 3px solid #3498db;
+      object-fit: cover;
+      transition: transform 0.3s ease-in-out;
   }
   
-  .profile-image:hover {
-    transform: scale(1.1);
+  .user-profile-image-box img:hover {
+      transform: scale(1.1);
   }
   
+  /* User Info */
   .user-info {
-    width: 100%;
+      margin-top: 15px;
   }
   
   .label-data {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 15px;
-    margin-bottom: 10px;
-    background-color: #f9f9fc;
-    border-radius: 5px;
-    border: 1px solid #e0e0e0;
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 15px;
+      margin-bottom: 10px;
+      background-color: #f9f9fc;
+      border-radius: 5px;
+      border: 1px solid #ddd;
   }
   
+  /* Labels and Data */
   .label {
-    font-weight: bold;
-    color: #333333;
+      font-weight: bold;
+      color: #333;
   }
   
   .data {
-    color: #555555;
-    text-align: right;
+      color: #555;
   }
   
-  input[type="submit"] {
-    margin-top: 10px;
-    padding: 5px 10px;
-    background-color: #3498db;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
+  /* Edit Button */
+  .mt-2 {
+      margin-top: 15px;
   }
   
-  input[type="submit"]:hover {
-    background-color: #2980b9;
+  .mt-2 a {
+      display: block;
+      background-color: #27ae60;
+      color: white;
+      padding: 10px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      text-align: center;
+      transition: background-color 0.3s;
   }
   
+  .mt-2 a:hover {
+      background-color: #219150;
+  }
+  
+  /* Form Styling */
+  form {
+      margin-top: 15px;
+      text-align: left;
+  }
+  
+  form input, form textarea, form select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+  }
+  
+  form button {
+      width: 100%;
+      background-color: #3498db;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      
+  }
+  
+  form button:hover {
+      background-color: #2980b9;
+  }
+  
+  /* Messages */
   .msg {
-    text-align: center;
-    color: rgb(232, 0, 0);
+      text-align: center;
+      color: rgb(232, 0, 0);
+      font-weight: bold;
+  }
+  
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+      .profile {
+          width: 90%;
+          max-width: 350px;
+          padding: 15px;
+          position: static; /* Removes absolute positioning on small screens */
+          transform: none;
+          margin: auto;
+      }
   }
 
-  /* form {
-    background: #ffffff;
-    padding: 20px 30px;
-    border-radius: 8px;
-    box-shadow: 4px 8px 12px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
-    margin-top: 100px;
-} */
-
-
-form input, form textarea, form select {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 12px;
-    font-size: 16px;
-}
-
-
-/* form button {
-    width: 100%;
-    background-color: #06BBCC;
-    color: black;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    display: flex;
-} */
-
-form button:hover {
-    background-color: rgb(27, 134, 151);
-}
-
-.button{
-  margin-left: 120px;
-}
-
-
+  p {
+      display: none;
+  }
